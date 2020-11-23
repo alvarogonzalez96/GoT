@@ -89,3 +89,6 @@ def about_us(request):
 def personajes(request):
     return render(request, 'blog/personajes.html')
 
+def quiz(request):
+    return render(request, 'blog/quiz.html')
+

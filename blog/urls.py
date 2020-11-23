@@ -14,4 +14,5 @@ urlpatterns = [
     path(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
     path('about_us/', views.about_us, name='about_us'),
     path('personajes/', views.personajes, name='personajes'),
+     path('quiz/', views.quiz, name='quiz'),
 ]
