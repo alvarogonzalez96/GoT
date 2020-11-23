@@ -81,3 +81,11 @@ def comment_remove(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
     return redirect('post_detail', pk=comment.post.pk)
+
+
+def about_us(request):
+    return render(request, 'blog/about_us.html')
+
+def personajes(request):
+    return render(request, 'blog/personajes.html')
+

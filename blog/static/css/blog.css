@@ -1,12 +1,14 @@
+
+
 h1 a, h2 a {
      color: #FCA205;
      font-family: 'Lobster';
 }
 
 .page-header {
-    background-color: #d305fc;
+    background-color: #000000;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 40px 20px 50px 40px;
 }
 
 .page-header p{
@@ -61,3 +63,32 @@ h1, h2, h3, h4 {
 .comment {
     margin: 20px 0px 20px 20px;
 }
+
+#button {
+ padding: 0;
+ margin-left: 450px;
+ }
+
+ #button li {
+ display: inline;
+ }
+
+ #button li a {
+ font-family: Arial;
+ font-size: 20px;
+ text-decoration: none;
+ float: left;
+ padding: 10px;
+ background-color: #none;
+ color: #999999;
+
+ }
+
+ #button li a:hover {
+ background-color: #fff;
+ margin-top: -2;
+ padding-bottom: 12px;]
+ }
+
+
+
