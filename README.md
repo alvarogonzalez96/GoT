@@ -1,5 +1,5 @@
 # Poyeto Final - Ingeniería Web
--Game of Thrones
+Game of Thrones
 
 ### Contribuidores:
 - Álvaro Gonzalez - alvaro.gonzalez@opendeusto.es
