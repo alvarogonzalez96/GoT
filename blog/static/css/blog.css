@@ -64,6 +64,7 @@ h1, h2, h3, h4 {
     margin: 20px 0px 20px 20px;
 }
 
+/*Los botones del menú*/
 #button {
  padding: 0;
  margin-left: 450px;
@@ -90,7 +91,7 @@ h1, h2, h3, h4 {
  padding-bottom: 12px;]
  }
 
-
+/*Para las casas y quiz*/
 body {
     color: #413D3D;
     font-family: 'Oswald', sans-serif;
@@ -149,3 +150,24 @@ img {
     border-radius: 5px;
 }
 
+
+/*Home*/
+
+.fondo {
+    background-image: url("../images/got.jpg");
+    background-size: cover;
+}
+
+
+.cabecera{
+  color: #fff;
+  height: 100%;
+  width: 200%;
+  line-height: 200px;
+  text-align: center;
+  vertical-align: middle;
+  text-shadow: #111 0px 0px 10px;
+  margin-left: -70px;
+  margin-top: -25px;
+  
+}

@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.post_list, name='post_list'),
+    path('', views.home, name='home'),
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
@@ -14,5 +14,7 @@ urlpatterns = [
     path(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
     path('about_us/', views.about_us, name='about_us'),
     path('personajes/', views.personajes, name='personajes'),
-     path('quiz/', views.quiz, name='quiz'),
+    path('quiz/', views.quiz, name='quiz'),
+    path('quotes/', views.quotes, name='quotes'),
+    path('post_list/', views.post_list, name='post_list'),
 ]

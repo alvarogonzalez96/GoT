@@ -92,3 +92,12 @@ def personajes(request):
 def quiz(request):
     return render(request, 'blog/quiz.html')
 
+def quotes(request):
+    return render(request, 'blog/quotes.html')
+
+def create(request):
+    return render(request, 'blog/create.html')
+
+def home(request):
+    return render(request, 'blog/home.html')
+
