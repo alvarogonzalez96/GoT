@@ -2,9 +2,19 @@ from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+
+
+
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default='Character')
     title = models.CharField(max_length=200)
     text = RichTextField()
     created_date = models.DateTimeField(

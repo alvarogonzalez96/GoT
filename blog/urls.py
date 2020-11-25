@@ -17,4 +17,6 @@ urlpatterns = [
     path('quiz/', views.quiz, name='quiz'),
     path('quotes/', views.quotes, name='quotes'),
     path('post_list/', views.post_list, name='post_list'),
+    path('categorySelection/', views.categorySelection, name ='categorySelection'),
+    path('category/<int:category_id>/posts', views.CategoriesPost, name='CategoriesPost'),
 ]

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
@@ -101,3 +101,15 @@ def create(request):
 def home(request):
     return render(request, 'blog/home.html')
 
+def categorySelection(request):
+    categories = Category.objects.all()
+    context = {'categories' : categories}
+    
+    return render(request, 'blog/category_selection.html', context)
+
+
+def CategoriesPost(request, category_id):
+    category = get_object_or_404(Category, pk=category_id)
+    posts = category.post_set.all()
+    context = {'category' : category, 'posts' : posts}
+    return render(request,'blog/categories_post.html', context)
