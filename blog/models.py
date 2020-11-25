@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    text = RichTextField()
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
@@ -25,7 +26,7 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200)
-    text = models.TextField()
+    text = RichTextField()
     created_date = models.DateTimeField(default=timezone.now)
     approved_comment = models.BooleanField(default=False)
 
@@ -35,3 +36,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
+
