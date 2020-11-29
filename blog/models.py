@@ -8,10 +8,6 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
-
-
-
-
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default='Character')
@@ -47,3 +43,13 @@ class Comment(models.Model):
     def __str__(self):
         return self.text
 
+class Contributors(models.Model):
+    name = models.CharField(max_length=200)
+    surnames = models.CharField(max_length=200)
+    age = models.IntegerField()
+    residence = models.CharField(max_length=200)
+    movile = models.IntegerField()
+    email = models.EmailField(max_length=254)
+    profile = models.CharField(max_length=200)
+    academic = models.CharField(max_length=200)
+    github = models.CharField(max_length=200)

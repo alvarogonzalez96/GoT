@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	<div>
+        <h1> {{contributor.name}} {{contributor.surnames}}</h1>
+        <h3>Age: </h3>
+        <p>{{contributor.age}}</p>
+        <h3>Residence: </h3>
+        <p>{{contributor.residence}}</p>
+        <h3>Movile: </h3>
+        <p>{{contributor.movile}}</p>
+        <h3>Email: </h3>
+        <p>{{contributor.email}}</p>
+        <h3>Profile: </h3>
+        <p>{{contributor.profile}}</p>
+        <h3>Academic: </h3>
+        <p>{{contributor.academic}}</p>
+        <a href="{{contributor.github}}" target="_blank">Github</a>
+
+	</div>
+{% endblock %}
