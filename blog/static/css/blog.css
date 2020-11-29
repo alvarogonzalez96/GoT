@@ -96,7 +96,7 @@ body {
     color: #413D3D;
     font-family: 'Oswald', sans-serif;
     width: 100%;
-  
+    background-color: white;
     margin: 0 auto;
 }
 
@@ -175,4 +175,8 @@ img {
 div.fondo.cabecera {
     width: 1920px;
     height: 1080px;
+}
+
+body#homepage {
+    background-color: black;
 }
