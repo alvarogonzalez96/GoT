@@ -19,4 +19,5 @@ urlpatterns = [
     path('post_list/', views.post_list, name='post_list'),
     path('categorySelection/', views.categorySelection, name ='categorySelection'),
     path('category/<int:category_id>/posts', views.CategoriesPost, name='CategoriesPost'),
+    path('about_us/<str:name>', views.base_curriculums, name='curriculum'),
 ]
