@@ -67,7 +67,7 @@ h1, h2, h3, h4 {
 /*Los botones del menú*/
 #button {
  padding: 0;
- margin-left: 450px;
+ margin-left: 650px;
  }
 
  #button li {
@@ -170,4 +170,9 @@ img {
   margin-left: -70px;
   margin-top: -25px;
   
+}
+
+div.fondo.cabecera {
+    width: 1920px;
+    height: 1080px;
 }
