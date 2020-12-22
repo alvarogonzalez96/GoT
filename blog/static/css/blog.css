@@ -13,6 +13,7 @@ h1 a, h2 a {
 
 .page-header p{
   font-size: 10pt;
+ 
 }
 
 .page-header a {
@@ -80,7 +81,7 @@ h1, h2, h3, h4 {
  text-decoration: none;
  float: left;
  padding: 10px;
- background-color: #none;
+ background-color: transparent;
  color: #999999;
 
  }
@@ -88,7 +89,7 @@ h1, h2, h3, h4 {
  #button li a:hover {
  background-color: #fff;
  margin-top: -2;
- padding-bottom: 12px;]
+ padding-bottom: 12px;
  }
 
 /*Para las casas y quiz*/
@@ -179,4 +180,59 @@ div.fondo.cabecera {
 
 body#homepage {
     background-color: black;
+}
+
+/*Footer*/
+
+footer{
+    padding: 8px;
+    position: bottom;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+}
+
+.main-content{
+    display: flex;
+}
+
+.main-content.box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+
+}
+
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content{
+    margin: 20px 0 0 0;
+    padding: 8px;
+}
+
+.left .content p{
+    text-align: justify;
+}
+
+.left .content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a span{
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover{
+    background-color: white;
+    
 }
