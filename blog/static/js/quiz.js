@@ -1,3 +1,10 @@
+{% load staticfiles %}
+
+<script src="{% static "js/jquery-1.11.1.js" %}"></script>
+<script src="{% static "js/rango-jquery.js" %}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
 
 $(document).ready(function() {
 start(questionNumber);
@@ -109,7 +116,6 @@ function end() {
   restart();
 };
 
-// result image accourding to correct answers
 function finalImage() {
   if(totalCorrect < allQuestions.length && totalCorrect >= (allQuestions.length*.7)){
             optionFinal = 1;

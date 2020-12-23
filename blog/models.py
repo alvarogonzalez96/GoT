@@ -53,3 +53,4 @@ class Contributors(models.Model):
     profile = models.CharField(max_length=200)
     academic = models.CharField(max_length=200)
     github = models.CharField(max_length=200)
+
