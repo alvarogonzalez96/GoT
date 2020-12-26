@@ -1,10 +1,3 @@
-{% load staticfiles %}
-
-<script src="{% static "js/jquery-1.11.1.js" %}"></script>
-<script src="{% static "js/rango-jquery.js" %}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-
 $(document).ready(function () {
   
   var quotes = [
@@ -181,8 +174,8 @@ $(document).ready(function () {
 
   var rand = function() {
   var i = Math.floor(Math.random()*quotes.length);
-	newQuote = quotes[i].quote;
-  newCharacter = quotes[i].character;
+	  newQuote = quotes[i].quote;
+    newCharacter = quotes[i].character;
   };
   
   $("#quoteButton").click(function() {
