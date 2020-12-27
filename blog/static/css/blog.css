@@ -174,8 +174,8 @@ img {
 }
 
 div.fondo.cabecera {
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    height: auto;
 }
 
 body#homepage {
