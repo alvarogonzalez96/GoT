@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html Lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hola mundo con vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+   <!-- <script src="app.js"></script> -->
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+          <li v-for="user of users">{{user.nombre}} {{user.mail}} {{user.numero}} <button @click="eliminarUsuario(user.nombre)"> X </button></li>
+        </ul>
+        <input type="text" v-model="nuevoNombre" > <!--@keyup.enter="agregarUsuario"-->
+        <input type="text" v-model="nuevoMail" >
+        <input type="number" v-model.number="nuevoNumero" @keyup.enter="agregarUsuario">
+        <button @click="agregarUsuario"> Agregar </button>
+        
+    </div>
+</body>
+
+<script>
+    const app = new Vue({
+  el: '#app',
+  data:{
+    users:[
+    {nombre:"patata",mail:"cornea",numero:0},
+    {nombre:"izai",mail:"cornea",numero:1},
+    {nombre:"alvaro",mail:"cornea",numero:2},
+    {nombre:"dj",mail:"cornea",numero:3}
+    ],
+    nuevoNombre: "",
+    nuevoMail: "",
+    nuevoNumero: 0
+  },
+  methods:{
+    agregarUsuario () {
+        this.users.push({
+            nombre: this.nuevoNombre,mail: this.nuevoMail,numero: this.nuevoNumero
+        });
+        this.nuevoNombre = "";
+        this.nuevoMail = "";
+        this.nuevoNumero = 0;
+        localStorage.setItem('gym-vue',JSON.stringify(this.users))
+    },
+    eliminarUsuario (name){
+      index = -1;
+      finded = true;
+      for(user of this.users){
+        if(user.nombre === name){
+          index = this.users.indexOf(user)
+        }
+      }
+      if (index > -1) {
+        this.users.splice(index, 1);
+      }
+      localStorage.setItem('gym-vue',JSON.stringify(this.users))
+    }
+  },
+  created: function(){
+    let datosDB = JSON.parse(localStorage.getItem('gym-vue'))
+    if(datosDB === null){
+      this.users = [];
+    }else {
+      this.users = datosDB;
+    }
+  }
+})
+</script>
+
+
+</html>

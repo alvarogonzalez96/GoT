@@ -1,11 +1,11 @@
-# Poyeto Final - Ingeniería Web
+﻿# Poyeto Final - Ingeniería Web
 Game of Thrones
 
 ### Contribuidores:
 - Álvaro Gonzalez - alvaro.gonzalez@opendeusto.es
 - Asier Goirigolzarri - asier.goirigolzarri@opendeusto.es
-- Eduardo Rodríguez - izai.anda@opendeusto.es
-- Izai Anda - edurodriguez@opendeusto.es
+- Eduardo Rodríguez - edurodriguez@opendeusto.es 
+- Izai Anda - izai.anda@opendeusto.es
 
 ### Documentación:
 La página web creada (de temática Juego de Tronos) consta de varias partes:
@@ -29,3 +29,4 @@ Aspectos importantes del proyecto:
 
 ### Entrega 3:
 En cuanto a la entrega 3, hemos decidido eriquecer la parte cliente utilizando jQuery y ajax e implementar la opción del multilingüismo, haciendo disponible la web en castellano y en inglés.
+Por otro lado, respecto al desarrollo con Vue hemos decidido hacerlo aparte del proyecto de GoT. Por lo que en la carpeta /vue podrás encontrar un html con el código basico para visualizar, eliminar y añadir usuarios a luna lista de usuarios. Estos usuarios tienen nombre, correo y número de teléfono.
