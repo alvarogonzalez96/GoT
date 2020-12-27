@@ -186,11 +186,11 @@ body#homepage {
 
 footer{
     padding: 8px;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     width: 100%;
     background-color: white;
-    margin-top: 700px;
+    margin-top: 600px;
 }
 
 .main-content{
