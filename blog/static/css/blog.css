@@ -9,13 +9,14 @@ h1 a, h2 a {
     background-color: #000000;
     margin-top: 0;
     padding: 40px 20px 50px 40px;
+    margin-left: auto;
+    width: 100%;
 }
 
 .page-header p{
   font-size: 10pt;
  
 }
-
 
 .page-header a {
     font-size: 10pt;
@@ -69,7 +70,8 @@ h1, h2, h3, h4 {
 /*Los botones del menú*/
 #button {
  padding: 0;
- margin-left: 650px;
+ margin-left: 690px;
+ position: relative;
  }
 
  #button li {
