@@ -22,27 +22,53 @@ msgstr ""
 msgid "Messages"
 msgstr ""
 
-#: blog\templates\blog\base.html:31
+#: blog\templates\blog\base.html:33
 msgid "Home"
 msgstr "Inicio"
 
 
-#: blog\templates\blog\base.html:31
+#: blog\templates\blog\base.html:34
 msgid "Characters"
 msgstr "Personajes"
 
-#: blog\templates\blog\base.html:31
+#: blog\templates\blog\base.html:36
 msgid "Quiz"
 msgstr "Test"
 
-#: blog\templates\blog\base.html:31
+#: blog\templates\blog\base.html:38
 msgid "About us"
 msgstr "Sobre nosotros"
 
-#: blog\templates\blog\base.html:31
+#: blog\templates\blog\base.html:37
 msgid "Quotes"
 msgstr "Frases"
+
+
+#: blog\templates\blog\base.html:130
+msgid "Send"
+msgstr "Enviar"
+
+#: blog\templates\blog\base.html:118
+msgid "Contact us"
+msgstr "Contactanos"
+
+#: blog\templates\blog\base.html:126
+msgid "Message"
+msgstr "Mensaje"
+
+#: blog\templates\blog\base.html:86
+msgid "About Game of Thrones"
+msgstr "Sobre Juego de Tronos"
+
 
 #: blog\templates\blog\personajes.html:8
 msgid "Best Characters"
 msgstr "Mejores Personajes"
+
+#: blog\templates\blog\personajes.html:27
+msgid "Login"
+msgstr "Iniciar sesion"
+
+#: blog\templates\blog\quiz.html:5
+msgid "Question:"
+msgstr "Pregunta:"

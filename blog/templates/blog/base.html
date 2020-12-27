@@ -16,126 +16,126 @@
 <body class="landing">
 
     {{LANGUAGE_CODE}}
-
-    <div class="page-header">
-        <div>
-            {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu">Nuevo Post <span class="glyphicon glyphicon-plus"></span></a>
-            <a href="{% url 'post_draft' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
-            <p class="top-menu">Hola {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-            {% else %}
-            <a href="{% url 'login' %}" class="top-menu">Login <span class="glyphicon glyphicon-lock"></span></a>
-            {% endif %}
-            <h1><a href="/">Game of Thrones</a></h1>
-        </div>
-        <div>
-            <ul id="button">
-                <li><a href="/">{% trans "Home" %}</a></li>
-                <li><a href="{% url 'personajes' %}">{% trans "Characters" %}</a></li>
-                <li><a href="{% url 'categorySelection' %}">Blog</a></li>
-                <li><a href="{% url 'quiz' %}">{% trans "Quiz" %}</a></li>
-                <li><a href="{% url 'quotes' %}">{% trans "Quotes" %}</a></li>
-                <li><a href="{% url 'about_us' %}">{% trans "About us" %}</a></li>
-                <li>
-
-
-
-                    {% get_current_language as LANGUAGE_CODE %}
-                    <!--LANGUAGE SWITCHER-->
-                    <form action="{% url 'set_language' %}" method="post">
-                        {% csrf_token %}
-                        <input type="hidden" name="text" value="{{ redirect_to }}">
-                        <select name="language" id="" class="form-select" aria-label="Default select example">
-
-                            {% get_available_languages as LANGUAGES %}
-                            {% get_language_info_list for LANGUAGES as languages %}
-                            {% for language in languages %}
-                            <option value="{{language.code}}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
-                                {{language.name_local}}({{language.code}})
-                            </option>
-                            {% endfor %}
-                        </select>
-                        <input type="submit" value="Go">
-                    </form>
-                    <!--LANGUAGE SWITCHER END-->
+    <main>
+        <div class="page-header">
+            <div>
+                {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu">Nuevo Post <span class="glyphicon glyphicon-plus"></span></a>
+                <a href="{% url 'post_draft' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                <p class="top-menu">Hola {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                {% else %}
+                <a href="{% url 'login' %}" class="top-menu">{% trans "Login" %} <span class="glyphicon glyphicon-lock"></span></a>
+                {% endif %}
+                <h1><a href="/">Game of Thrones</a></h1>
+            </div>
+            <div>
+                <ul id="button">
+                    <li><a href="/">{% trans "Home" %}</a></li>
+                    <li><a href="{% url 'personajes' %}">{% trans "Characters" %}</a></li>
+                    <li><a href="{% url 'categorySelection' %}">Blog</a></li>
+                    <li><a href="{% url 'quiz' %}">{% trans "Quiz" %}</a></li>
+                    <li><a href="{% url 'quotes' %}">{% trans "Quotes" %}</a></li>
+                    <li><a href="{% url 'about_us' %}">{% trans "About us" %}</a></li>
+                    <li>
 
 
+
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <!--LANGUAGE SWITCHER-->
+                        <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="text" value="{{ redirect_to }}">
+                            <select name="language" id="" class="form-select" aria-label="Default select example">
+
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                <option value="{{language.code}}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                    {{language.name_local}}({{language.code}})
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Go">
+                        </form>
+                        <!--LANGUAGE SWITCHER END-->
 
 
 
 
-                </li>
-            </ul>
-        </div>
-    </div>
 
 
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <footer>
-        <div class="main-content">
 
-            <div class="left box">
-                <h2>About Game of Thrones</h2>
-                <div class="content">
-                    <p>Game of thrones is a TV Show that revolvs around households fighting for the iron throne, which gives them control over the seven kingdoms. For more info, check out the official social media links below: </p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/GameOfThrones/"><span class="fab fa-facebook-f"></span></a>
-                        <a href="https://twitter.com/GameofThrones"><span class="fab fa-twitter"></span></a>
-                        <a href="https://www.instagram.com/GameOfThrones/"><span class="fab fa-instagram"></span></a>
-                        <a href="https://www.youtube.com/user/GameofThrones"><span class="fab fa-youtube"></span></a>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="main-content">
+
+                <div class="left box">
+                    <h3>{% trans "About Game of Thrones" %}</h3>
+                    <div class="content">
+                        <p>Game of thrones is a TV Show that revolvs around households fighting for the iron throne, which gives them control over the seven kingdoms. For more info, check out the official social media links below: </p>
+                        <div class="social">
+                            <a href="https://www.facebook.com/GameOfThrones/"><span class="fab fa-facebook-f"></span></a>
+                            <a href="https://twitter.com/GameofThrones"><span class="fab fa-twitter"></span></a>
+                            <a href="https://www.instagram.com/GameOfThrones/"><span class="fab fa-instagram"></span></a>
+                            <a href="https://www.youtube.com/user/GameofThrones"><span class="fab fa-youtube"></span></a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center box">
+                    <h3>Address</h3>
+                    <div class="content">
+                        <div class="place">
+                            <span class="fas fa-map-marker-alt"></span>
+                            <span class="text">Bilbao, Universidad de Deusto</span>
+                        </div>
+                        <div class="phone">
+                            <span class="fas fa-phone-alt"></span>
+                            <span class="text">+34 943 326 600</span>
+                        </div>
+                        <div class="place">
+                            <span class="fas fa-envelope"></span>
+                            <span class="text">edurodriguez@opendeusto.es</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right box">
+                    <h3>{% trans "Contact us" %}</h3>
+                    <div class="content">
+                        <form action="#">
+                            <div class="email">
+                                <div class="text">Email *</div>
+                                <input type="email" required>
+                            </div>
+                            <div class="msg">
+                                <div class="text"> {% trans "Message" %} *</div>
+                                <textarea cols="35" rows="5" required></textarea>
+                            </div>
+                            <div class="btn">
+                                <button type="submit">{% trans "Send" %}</button>
+                            </div>
+                        </form>
 
                     </div>
                 </div>
             </div>
-
-            <div class="center box">
-                <h2>Address</h2>
-                <div class="content">
-                    <div class="place">
-                        <span class="fas fa-map-marker-alt"></span>
-                        <span class="text">Bilbao, Universidad de Deusto</span>
-                    </div>
-                    <div class="phone">
-                        <span class="fas fa-phone-alt"></span>
-                        <span class="text">+34 943 326 600</span>
-                    </div>
-                    <div class="place">
-                        <span class="fas fa-envelope"></span>
-                        <span class="text">edurodriguez@opendeusto.es</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right box">
-                <h2>Contact us</h2>
-                <div class="content">
-                    <form action="#">
-                        <div class="email">
-                            <div class="text">Email *</div>
-                            <input type="email" required>
-                        </div>
-                        <div class="msg">
-                            <div class="text">Message *</div>
-                            <textarea cols="35" rows="5" required></textarea>
-                        </div>
-                        <div class="btn">
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
+        </footer>
+    </main>
 </body>
 
 </html>
